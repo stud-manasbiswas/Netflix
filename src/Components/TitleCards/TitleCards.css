@@ -2,9 +2,9 @@
 
 .titlecards {
   
-  margin-top: 50px; /* Pull it slightly over hero section for Netflix feel */
-  
-  margin-bottom: -115px;
+  position: relative;
+  margin-top: 10px; /* pull up cards over the banner */
+  z-index: 2;
   width: 100vw;
  
 }
@@ -12,13 +12,13 @@
 .title-cards h2 {
   color: #ffffff;
   font-size: 1.8rem;
-  margin-bottom: 10px;
+  margin-bottom:12px;
 }
 
 .card-list {
    
   display: flex;
-    overflow-x: scroll;
+overflow-x: auto;
   gap: 10px;
 
 }
@@ -40,7 +40,7 @@
 .card-list .card p{
       color: #e5e5e5;
   font-size: 0.9rem;
-  margin-top: 1px;
+  margin-top: 5px;
   text-align: center;
 }
 

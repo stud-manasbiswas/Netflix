@@ -7,7 +7,8 @@
   box-sizing: border-box;
 }
 body{
-  background-color: #040404;
+  background-color: black;
   color:white;
   font-family: 'poppins';
+  overflow-x: hidden;
 }
