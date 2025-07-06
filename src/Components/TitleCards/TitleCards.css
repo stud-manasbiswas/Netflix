@@ -1,0 +1,46 @@
+/* TitleCards.css */
+
+.titlecards {
+  
+  margin-top: 50px; /* Pull it slightly over hero section for Netflix feel */
+  
+  margin-bottom: -115px;
+  width: 100vw;
+ 
+}
+
+.title-cards h2 {
+  color: #ffffff;
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+.card-list {
+   
+  display: flex;
+    overflow-x: scroll;
+  gap: 10px;
+
+}
+.card-list::-webkit-scrollbar{
+    display: none;
+}
+.card-list img{
+    
+    width: 240px;
+    border-radius: 4px;
+    cursor: pointer;
+
+}
+.card-list .card {
+    
+    position: relative;
+}
+
+.card-list .card p{
+      color: #e5e5e5;
+  font-size: 0.9rem;
+  margin-top: 1px;
+  text-align: center;
+}
+
