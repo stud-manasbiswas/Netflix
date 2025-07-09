@@ -1,46 +1,113 @@
 /* TitleCards.css */
 
 .titlecards {
-  
   position: relative;
-  margin-top: 10px; /* pull up cards over the banner */
+  margin-top: 10px;
   z-index: 2;
   width: 100vw;
- 
 }
 
-.title-cards h2 {
+.titlecards h2 {
   color: #ffffff;
   font-size: 1.8rem;
-  margin-bottom:12px;
+  margin-bottom: 12px;
 }
 
 .card-list {
-   
   display: flex;
-overflow-x: auto;
+  overflow-x: auto;
+  scroll-behavior: smooth;
   gap: 10px;
-
-}
-.card-list::-webkit-scrollbar{
-    display: none;
-}
-.card-list img{
-    
-    width: 240px;
-    border-radius: 4px;
-    cursor: pointer;
-
-}
-.card-list .card {
-    
-    position: relative;
 }
 
-.card-list .card p{
-      color: #e5e5e5;
+.card-list::-webkit-scrollbar {
+  display: none;
+}
+
+.card {
+  position: relative;
+  flex: 0 0 auto;
+  width: 240px;
+}
+
+.img-container {
+  width: 100%;
+  height: 135px;
+  background-color: #222;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.img-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.card p {
+  color: #e5e5e5;
   font-size: 0.9rem;
   margin-top: 5px;
   text-align: center;
+  text-decoration: none;
 }
 
+/* ✅ Skeleton Loader Styles */
+.skeleton {
+  animation: shimmer 1.5s infinite linear;
+  background: linear-gradient(
+    to right,
+    #333 0%,
+    #555 20%,
+    #333 40%,
+    #333 100%
+  );
+  background-size: 800px 100%;
+}
+
+.skeleton-card .skeleton-text {
+  width: 80%;
+  height: 15px;
+  border-radius: 4px;
+  margin: 10px auto 0;
+  background: #333;
+  animation: shimmer 1.5s infinite linear;
+  background: linear-gradient(
+    to right,
+    #333 0%,
+    #555 20%,
+    #333 40%,
+    #333 100%
+  );
+  background-size: 800px 100%;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -800px 0;
+  }
+  100% {
+    background-position: 800px 0;
+  }
+}
+
+@media (max-width:800px) {
+  .titlecards{
+    margin-top: 20px;
+    margin-bottom: 0;
+
+  }
+  .titlecards h2{
+    font-size: 20px;
+  
+
+  }
+  .card-list img{
+    width: 200px;
+
+  }
+  .card-list p{
+    font-size: 12px;
+  }
+}
